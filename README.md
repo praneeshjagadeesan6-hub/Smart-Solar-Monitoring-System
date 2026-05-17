@@ -16,7 +16,7 @@ An autonomous IoT-based solution for solar energy optimization, featuring dual-a
 ## 📸 Project Showcase
 
 ### 🖥️ Live Dashboard
-![Live Dashboard](Media/Web%20page%20preview.png)
+![Live Dashboard](Media/Web%20page.png)
 *Real-time analytics showing efficiency curves and environmental data.*
 
 ### 🛠️ Hardware Prototype
