@@ -24,9 +24,8 @@ An autonomous IoT-based solution for solar energy optimization, featuring dual-a
 *Dual-axis tracking structure with integrated cleaning and cooling modules.*
 
 ### 🎥 System Demo
-[▶️ Click here to watch the Cleaning & Cooling Process](Media/Cleaning%20and%20cooling%20process%20model.mp4)
-
-[▶️ Click here to watch the Solar Motor Functioning](Media/Motor%20functioning%20on%20solar%20panel.mp4)
+* [▶️ Cleaning & Cooling Process Demo](Media/Cleaning%20and%20cooling%20process%20model.mp4)
+* [▶️ Solar Motor Functioning Demo](Media/Motor%20functioning%20on%20solar%20panel.mp4)
 
 ---
 
