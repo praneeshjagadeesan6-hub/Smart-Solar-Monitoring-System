@@ -87,3 +87,16 @@ This project addresses the critical efficiency gaps in stationary solar installa
 
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🗺️ Future Roadmap
+* **Deep Sleep Integration:** Optimize ESP32 power consumption for night-time operation.
+* **LoRaWAN Support:** Enable long-range communication for truly remote rural areas where WiFi is unavailable.
+* **Predictive Analytics:** Use historical data to predict peak generation hours and maintenance schedules.
+* **Mobile App:** Develop a native Android/iOS application for push-notification alerts.
+
+---
+
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](link-to-your-issues-tab) if you want to contribute to the code or suggest improvements.
