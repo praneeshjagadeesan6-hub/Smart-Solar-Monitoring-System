@@ -12,30 +12,33 @@ An autonomous IoT-based solution for solar energy optimization, featuring dual-a
 * **Performance Analytics:** Live tracking of Voltage, Current, Power, and Battery State of Charge (SoC).
 
 ---
-
 ## 📸 Project Showcase
 
 ### 🖥️ Live Dashboard
 ![Live Dashboard](Media/Web%20page.png)
-*Real-time analytics showing efficiency curves and environmental data.*
+*A custom-built web interface using Tailwind CSS and Chart.js. This dashboard fetches live telemetry from the ESP32 via Adafruit IO, displaying real-time power generation, efficiency metrics, and system health alerts.*
 
- ---
- 
-### 🛠️ Hardware Prototype
+---
+
+### 🛠️ Full Hardware Prototype
 ![Hardware Build](Media/Hardware%20model%20using%20esp32.jpeg)
-*Dual-axis tracking structure with integrated cleaning and cooling modules.*
+*The complete integrated system featuring the solar panel, dual-axis tracking servos, and the relay-controlled cleaning and cooling hardware. It demonstrates the full physical execution of the microgrid monitor.*
 
 ---
 
 ### ☀️ Specialized Tracking Model
 ![Solar Tracker](Media/Seperate%20Solar%20tracking%20model.jpeg)
-*Standalone dual-axis tracking unit used to validate the LDR-differential logic.*
+*A standalone dual-axis tracker prototype used for calibrating the LDR differential logic. This unit focuses exclusively on sun-path optimization before integration into the larger system.*
 
 ---
 
-### 🎥 System Demo
-* [▶️ Cleaning & Cooling Process Demo](Media/Cleaning%20and%20cooling%20process%20model.mp4)
-* [▶️ Solar Motor Functioning Demo](Media/Motor%20functioning%20on%20solar%20panel.mp4)
+### 🎥 System Demos
+
+* **[▶️ Cleaning & Cooling Process Demo](Media/Cleaning%20and%20cooling%20process%20model.mp4)**
+  *Demonstrates the automated cooling pump activating via temperature thresholds and the remote-triggered wiper system for dust removal.*
+
+* **[▶️ Solar Motor Functioning Demo](Media/Motor%20functioning%20on%20solar%20panel.mp4)**
+  *Showcases the dual-axis movement of the high-torque servos as they orient the solar panel toward the strongest light source in real-time.*
 
 ---
 
