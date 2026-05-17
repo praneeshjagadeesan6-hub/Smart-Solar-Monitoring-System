@@ -1,4 +1,4 @@
-<img width="1920" height="1170" alt="Web page preview" src="https://github.com/user-attachments/assets/180d3e58-b555-4b8b-8d25-a1ce56cf0bd1" /># ☀️ Smart Solar Monitoring & Management System
+# ☀️ Smart Solar Monitoring & Management System
 
 An autonomous IoT-based solution for solar energy optimization, featuring dual-axis tracking, automated cleaning, and thermal management.
 
@@ -13,13 +13,6 @@ An autonomous IoT-based solution for solar energy optimization, featuring dual-a
 
 ---
 
-## 📊 System Architecture
-The system uses an ESP32 as the central controller, communicating via MQTT to the cloud.
-
-
-
----
-
 ## 📸 Project Showcase
 
 ### 🖥️ Live Dashboard
@@ -27,15 +20,13 @@ The system uses an ESP32 as the central controller, communicating via MQTT to th
 *Real-time analytics showing efficiency curves and environmental data.*
 
 ### 🛠️ Hardware Prototype
-![Hardware Build](Media/Hardware%20model%20using%20esp%2032.jpg)
+![Hardware Build](Media/Hardware%20model%20using%20esp%2032.jpeg)
 *Dual-axis tracking structure with integrated cleaning and cooling modules.*
 
 ### 🎥 System Demo
-[▶️ Click here to watch the solar motor Demo](Media/Cleaning%20and%20cooling%20process%20model.mp4)
-### 🎥 System Demoal-time analytics showing efficiency curves and environmental data.*
+[▶️ Click here to watch the Cleaning & Cooling Process](Media/Cleaning%20and%20cooling%20process%20model.mp4)
 
-[Click here to watch the solar motor Demo](Cleaning and cooling process model.mp4)(Motor functioning on solar panel.mp4)
-*The demo shows the panel tracking a light source and the cleaning mechanism being triggered from the web app.*
+[▶️ Click here to watch the Solar Motor Functioning](Media/Motor%20functioning%20on%20solar%20panel.mp4)
 
 ---
 
@@ -52,14 +43,12 @@ The system uses an ESP32 as the central controller, communicating via MQTT to th
 ---
 
 ## 🛠️ Installation & Setup
-1.  **Hardware:** Wire the components as per the circuit diagram (found in the Hardware folder).
-2.  **Adafruit IO:** Create feeds named: `voltage`, `current`, `temp`, `humidity`, `battery`, `manual-cleaning`, and `manual-cooling`.
-3.  **Firmware:** Upload `Firmware/Solar_System.ino` to your ESP32 after updating your WiFi and Adafruit credentials.
-4.  **Web App:** Update `Web-Dashboard/script.js` with your Adafruit Username and Key, then open `index.html` in your browser.
+1. **Hardware:** Wire the components as per the circuit diagram.
+2. **Adafruit IO:** Create feeds: `voltage`, `current`, `temp`, `humidity`, `battery`, `manual-cleaning`, and `manual-cooling`.
+3. **Firmware:** Upload `Firmware/Solar_System_Firmware.ino` to your ESP32.
+4. **Web App:** Update `Web-Dashboard/script.js` with your credentials and open `index.html`.
 
 ---
 
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-Finalized professional README with media and documentation.
