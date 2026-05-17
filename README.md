@@ -16,7 +16,8 @@ This project addresses the critical efficiency gaps in stationary solar installa
 ## 🚀 Key Features
 
 * **Dual-Axis Tracking:** Maximizes energy harvest by following the sun's path using 4 LDR sensors and high-torque servos.
-* **Automated Maintenance:** * **Cooling:** Temperature-triggered water pump system (DHT22 sensor).
+* **Automated Maintenance:**
+    * **Cooling:** Temperature-triggered water pump system (DHT22 sensor).
     * **Cleaning:** Remote-controlled wiper mechanism to remove dust.
 * **IoT Dashboard:** Real-time data visualization via **Adafruit IO** and a custom **Tailwind CSS** web interface.
 * **Performance Analytics:** Live tracking of Voltage, Current, Power, and Battery State of Charge (SoC).
