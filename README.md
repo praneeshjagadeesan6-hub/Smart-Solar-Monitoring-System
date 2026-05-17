@@ -19,13 +19,19 @@ An autonomous IoT-based solution for solar energy optimization, featuring dual-a
 ![Live Dashboard](Media/Web%20page.png)
 *Real-time analytics showing efficiency curves and environmental data.*
 
+ ---
+ 
 ### 🛠️ Hardware Prototype
 ![Hardware Build](Media/Hardware%20model%20using%20esp32.jpeg)
 *Dual-axis tracking structure with integrated cleaning and cooling modules.*
 
+---
+
 ### ☀️ Specialized Tracking Model
 ![Solar Tracker](Media/Seperate%20Solar%20tracking%20model.jpeg)
 *Standalone dual-axis tracking unit used to validate the LDR-differential logic.*
+
+---
 
 ### 🎥 System Demo
 * [▶️ Cleaning & Cooling Process Demo](Media/Cleaning%20and%20cooling%20process%20model.mp4)
