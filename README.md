@@ -20,7 +20,7 @@ An autonomous IoT-based solution for solar energy optimization, featuring dual-a
 *Real-time analytics showing efficiency curves and environmental data.*
 
 ### 🛠️ Hardware Prototype
-![Hardware Build](Media/Hardware%20model%20using%20esp%2032.jpeg)
+![Hardware Build](Media/Hardware%20model%20using%20esp32.jpeg)
 *Dual-axis tracking structure with integrated cleaning and cooling modules.*
 
 ### 🎥 System Demo
