@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rural Microgrid Monitor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/all.min.css">
+    <style>
+        body { background-color: #f8fafc; font-family: 'Inter', sans-serif; }
+        .stat-label { color: #64748b; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.025em; }
+        .stat-value { color: #1e293b; font-weight: 800; font-size: 1.875rem; }
+        .stat-unit { color: #94a3b8; font-size: 0.875rem; font-weight: 500; margin-left: 0.25rem; }
+        .chart-container { background: white; border-radius: 1rem; border: 1px solid #e2e8f0; padding: 1.5rem; margin-bottom: 2rem; }
+    </style>
+</head>
+<body class="p-8">
+
+    <div class="max-w-7xl mx-auto">
+        <!-- Header from Screenshot 2026-05-13 160006.png -->
+        <header class="mb-10">
+            <h1 class="text-3xl font-extrabold text-slate-800">Rural Microgrid Monitor</h1>
+            <p class="text-slate-500">Real-time renewable energy system analysis</p>
+        </header>
+
+        <!-- Top Metrics Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-4 mb-12">
+            <div>
+                <p class="stat-label flex justify-between">Solar Generation <span class="text-blue-500"></span></p>
+                <p class="stat-value text-orange-500"><span id="solar-gen">0.00</span><span class="stat-unit">kW</span></p>
+            </div>
+            <div>
+                <p class="stat-label flex justify-between">Wind Generation <span class="text-red-500"></span></p>
+                <p class="stat-value text-emerald-500"><span id="wind-gen">0.0</span><span class="stat-unit">kW</span></p>
+            </div>
+            <div>
+                <p class="stat-label flex justify-between">Battery Level <span class="text-blue-500"></span></p>
+                <p class="stat-value text-blue-600"><span id="battery">0</span><span class="stat-unit">%</span></p>
+            </div>
+            <div>
+                <p class="stat-label flex justify-between">Power Consumption <span class="text-blue-500"></span></p>
+                <p class="stat-value text-rose-500"><span id="consumption">0.00</span><span class="stat-unit">kW</span></p>
+            </div>
+            <div>
+                <p class="stat-label">Temp</p>
+                <p class="stat-value"><span id="temp">0</span><span class="stat-unit">°C</span></p>
+            </div>
+            <div>
+                <p class="stat-label">Humidity</p>
+                <p class="stat-value"><span id="humi">0</span><span class="stat-unit">%</span></p>
+            </div>
+            <div>
+                <p class="stat-label">Grid Voltage</p>
+                <p class="stat-value"><span id="grid-v">0</span><span class="stat-unit">V</span></p>
+            </div>
+            <div>
+                <p class="stat-label">Grid Current</p>
+                <p class="stat-value"><span id="grid-c">0</span><span class="stat-unit">A</span></p>
+            </div>
+        </div>
+
+        <!-- System Efficiency Bar -->
+        <div class="bg-emerald-500 text-white p-6 rounded-2xl mb-8 relative overflow-hidden">
+            <div class="flex justify-between items-start mb-4">
+                <div>
+                    <h3 class="text-xl font-bold">System Efficiency</h3>
+                    <p class="text-emerald-100 text-sm">Total Generation: <span id="total-gen">0.00</span> kW</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-4xl font-black" id="eff-percent">0.0%</p>
+                    <span class="bg-black/20 text-[10px] px-2 py-1 rounded uppercase font-bold"><i class="fas fa-exclamation-triangle mr-1"></i> Below Target</span>
+                </div>
+            </div>
+            <div class="w-full bg-emerald-700/30 rounded-full h-4">
+                <div id="eff-bar" class="bg-white/90 h-4 rounded-full transition-all duration-1000" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <!-- Graphs Section -->
+        <div class="chart-container">
+            <h3 class="font-bold text-slate-700 mb-6">Real-time Energy Monitoring</h3>
+            <canvas id="energyChart" height="100"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h3 class="font-bold text-slate-700 mb-6">Thermal Analysis (Threshold 35°C)</h3>
+            <canvas id="tempChart" height="100"></canvas>
+        </div>
+
+        <!-- System Alerts from Screenshot 2026-05-13 160019.png -->
+        <div class="chart-container">
+            <h3 class="font-bold text-slate-700 mb-4">System Alerts</h3>
+            <div id="alert-box" class="space-y-2">
+                <div class="p-4 bg-red-50 text-red-600 rounded-lg border border-red-100 text-sm flex items-center">
+                    <i class="fas fa-info-circle mr-2"></i> Battery level critically low: <span id="alert-bat">0.0</span>%
+                </div>
+                <!-- Dynamic alerts will appear here -->
+            </div>
+        </div>
+
+        <!-- Manual Control Buttons -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+            <button onclick="manualControl('cleaning')" id="btn-cleaning" class="w-full p-4 bg-slate-800 text-white rounded-xl font-bold hover:bg-slate-700 transition-colors flex items-center justify-center">
+                <i class="fas fa-broom mr-2"></i> Manual Cleaning: OFF
+            </button>
+            <button onclick="manualControl('cooling')" id="btn-cooling" class="w-full p-4 bg-slate-800 text-white rounded-xl font-bold hover:bg-slate-700 transition-colors flex items-center justify-center">
+                <i class="fas fa-snowflake mr-2"></i> Manual Cooling: OFF
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
