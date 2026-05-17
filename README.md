@@ -23,14 +23,17 @@ The system uses an ESP32 as the central controller, communicating via MQTT to th
 ## 📸 Project Showcase
 
 ### 🖥️ Live Dashboard
-![Web Dashboard](Web page preview.png)
+![Live Dashboard](Media/Web%20page%20preview.png)
 *Real-time analytics showing efficiency curves and environmental data.*
 
 ### 🛠️ Hardware Prototype
-![Hardware Build](Hardware model using esp 32.jpg)
+![Hardware Build](Media/Hardware%20model%20using%20esp%2032.jpg)
 *Dual-axis tracking structure with integrated cleaning and cooling modules.*
 
 ### 🎥 System Demo
+[▶️ Click here to watch the solar motor Demo](Media/Cleaning%20and%20cooling%20process%20model.mp4)
+### 🎥 System Demoal-time analytics showing efficiency curves and environmental data.*
+
 [Click here to watch the solar motor Demo](Cleaning and cooling process model.mp4)(Motor functioning on solar panel.mp4)
 *The demo shows the panel tracking a light source and the cleaning mechanism being triggered from the web app.*
 
