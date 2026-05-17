@@ -1,10 +1,20 @@
 # ☀️ Smart Solar Monitoring & Management System
+### *An Autonomous IoT Solution for Rural Energy Optimization*
 
-An autonomous IoT-based solution for solar energy optimization, featuring dual-axis tracking, automated cleaning, and thermal management.
+This project addresses the critical efficiency gaps in stationary solar installations by integrating **Dual-Axis Tracking**, **Automated Dust Mitigation**, and **Active Thermal Regulation**. By leveraging the **ESP32** microcontroller and **MQTT protocol**, the system provides a closed-loop environment where real-time sensor data from the field is transformed into actionable energy analytics on a custom-built web dashboard.
+
+---
+### 🎯 Core Objectives
+
+1. **Efficiency Maximization:** Increase photovoltaic yield by 30-40% via real-time sun-path alignment.
+2. **Predictive Maintenance:** Monitor dust accumulation and voltage drops to trigger autonomous cleaning.
+3. **Hardware Longevity:** Prevent cell degradation through automated cooling when temperatures exceed 35°C.
+4. **Remote Accessibility:** Enable global system management through a cloud-synced web interface.
 
 ---
 
 ## 🚀 Key Features
+
 * **Dual-Axis Tracking:** Maximizes energy harvest by following the sun's path using 4 LDR sensors and high-torque servos.
 * **Automated Maintenance:** * **Cooling:** Temperature-triggered water pump system (DHT22 sensor).
     * **Cleaning:** Remote-controlled wiper mechanism to remove dust.
